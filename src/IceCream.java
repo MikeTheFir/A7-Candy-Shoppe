@@ -25,6 +25,15 @@ public class IceCream extends DessertItem{
     
     @Override
     public String toString(){
-        return ;
+        // put price into dollars and cents
+        String output = DessertShoppe.cents2dollarsAndCents(this.getCost());
+        // find the amount of space needed on receipt
+        int numOSpaces = 30 - super.getName().length() - output.length();
+        // use for loop to print out proper spacing
+        for (int i = 0; i < numOSpaces; i++) {
+            output = " " + output;  
+        }
+        // return what should be printed on the receipt
+        return super.getName() + output;
     }
 }

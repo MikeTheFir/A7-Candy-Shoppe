@@ -30,15 +30,22 @@ public class Candy extends DessertItem{
     
     @Override
     public int getCost(){
-        // calculate cost
-        double cost = this.weight * this.costPerPound;
-        // round the cost
-        double round = Math.round(cost);
-        return (int) round;
+        // calculate cost and round it
+        double cost = Math.round(this.weight * this.costPerPound);
+        return (int) cost;
     }
     
     @Override
     public String toString(){
-       return ;
+        // put price into dollars and cents
+        String output = DessertShoppe.cents2dollarsAndCents(this.getCost());
+        // find the amount of space needed on receipt
+        int numOSpaces = 30 - super.getName().length() - output.length();
+        // use for loop to print out proper spacing
+        for (int i = 0; i < numOSpaces; i++) {
+            output = " " + output;  
+        }
+        // return what should be printed on the receipt
+        return this.weight + " lbs. @ $" + this.costPerPound*0.01 + " /lb \n" + super.getName() + output;
     }
 }
