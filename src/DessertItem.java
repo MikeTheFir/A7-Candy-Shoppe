@@ -4,9 +4,7 @@
  * 
  * This class represents a generic dessert item for the inheritance/polymorphism assignment.
  * All other dessert items will be inheriting from this class.
- * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
  * DO NOT CHANGE THIS CLASS!
- * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
  * @author Mr. A. Lamont
  */
 public abstract class DessertItem {

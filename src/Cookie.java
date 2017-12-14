@@ -6,6 +6,7 @@
 
 /**
  *
+<<<<<<< HEAD
  * @author pistm9061
  */
 public class Cookie extends DessertItem{
