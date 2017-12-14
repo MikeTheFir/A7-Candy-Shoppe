@@ -11,13 +11,13 @@
 public class Candy extends DessertItem{
     
     private double weight;
-    private int costPerPound;
+    private int pricePerLbs;
     
     public Candy(String name, double weight, int pricePerLbs){
         super(name);
         // initialize variables
         this.weight = weight;
-        this.costPerPound = costPerPound;
+        this.pricePerLbs = pricePerLbs;
     }
     
     public double getWeight(){
@@ -25,13 +25,13 @@ public class Candy extends DessertItem{
     }
     
     public int getCPP(){
-        return this.costPerPound;
+        return this.pricePerLbs;
     }
     
     @Override
     public int getCost(){
         // calculate cost and round it
-        double cost = Math.round(this.weight * this.costPerPound);
+        double cost = Math.round(this.weight * this.pricePerLbs);
         return (int) cost;
     }
     
@@ -46,6 +46,6 @@ public class Candy extends DessertItem{
             output = " " + output;  
         }
         // return what should be printed on the receipt
-        return this.weight + " lbs. @ $" + this.costPerPound*0.01 + " /lb \n" + super.getName() + output;
+        return this.weight + " lbs. @ $" + this.pricePerLbs*0.01 + " /lb \n" + super.getName() + output;
     }
 }

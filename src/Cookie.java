@@ -10,13 +10,13 @@
  */
 public class Cookie extends DessertItem{
     
-    private int costPerDozen;
+    private int pricePer12;
     private int number;
     
     public Cookie(String name, int number, int pricePer12){
         super(name);
         // initialize variables
-        this.costPerDozen = costPerDozen;
+        this.pricePer12 = pricePer12;
         this.number = number;
     }
     
@@ -27,7 +27,7 @@ public class Cookie extends DessertItem{
     @Override
     public int getCost() {
         // calculate cost
-        int cost = (this.costPerDozen * this.number)/12;
+        int cost = (this.pricePer12 * this.number)/12;
         return cost;
     }
     
@@ -42,6 +42,6 @@ public class Cookie extends DessertItem{
             output = " " + output;  
         }
         // return what should be printed on the receipt
-        return this.number + " @ $" + this.costPerDozen*0.01 + " /dozen \n" + super.getName() + output;
+        return this.number + " @ $" + this.pricePer12*0.01 + " /dozen \n" + super.getName() + output;
     }
 }
